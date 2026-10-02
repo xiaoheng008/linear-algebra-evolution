@@ -1,0 +1,63 @@
+site_name: 线性代数：从问题到系统
+site_description: 一条从问题出发、逐步重建线性代数的演化式教程
+site_url: https://xiaoheng008.github.io/linear-algebra-evolution/
+docs_dir: docs
+use_directory_urls: true
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+  features:
+    - navigation.instant
+    - navigation.footer
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang: zh
+
+nav:
+  - 首页: index.md
+  - 学习路线: SUMMARY.md
+  - 概念演化图: evolution-map.md
+  - 教程:
+      - 序言: book/00-preface.md
+      - 01 多个约束能否同时成立: book/01-linear-equations.md
+      - 02 怎样系统地简化方程组: book/02-elimination.md
+      - 03 重复出现的系数能否压缩: book/03-matrix.md
+      - 04 怎样把一组数作为整体处理: book/04-vector.md
+      - 05 矩阵乘向量的输出由什么组成: book/05-linear-combination.md
+  - 练习: exercises/phase-1.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/reader.css
+
+copyright: 教程文字采用 CC BY 4.0 · 实验代码采用 MIT License

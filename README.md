@@ -6,19 +6,19 @@
 
 ## 从哪里开始
 
-按 [学习路线](SUMMARY.md) 顺序阅读 `book/`。每章会从一个具体问题开始，安排尝试和观察，再给概念命名并严格推导。遇到练习时，建议先写下自己的推理；提示应从最小的一步开始看。
+按 [学习路线](docs/SUMMARY.md) 顺序阅读 `docs/book/`。每章会从一个具体问题开始，安排尝试和观察，再给概念命名并严格推导。遇到练习时，建议先写下自己的推理；提示应从最小的一步开始看。
 
 ## 目录
 
-- `book/`：教程正文
-- `exercises/`：回忆、推导、应用和重建练习
-- `experiments/`：可运行的 NumPy / Matplotlib 探索脚本
-- `evolution-map.md`：概念依赖与因果压力图
+- `docs/book/`：教程正文
+- `docs/exercises/`：回忆、推导、应用和重建练习
+- `docs/experiments/`：可运行的 NumPy / Matplotlib 探索脚本
+- `docs/evolution-map.md`：概念依赖与因果压力图
 
 运行实验需要 Python、NumPy 和 Matplotlib。例如：
 
 ```bash
-python experiments/01_equations.py
+python docs/experiments/01_equations.py
 ```
 
 ## 项目状态
