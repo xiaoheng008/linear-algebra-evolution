@@ -1,0 +1,59 @@
+title: &siteTitle 线性代数如何长出来
+baseURL: https://xiaoheng008.github.io/linear-algebra-evolution/
+defaultContentLanguage: zh
+enableGitInfo: true
+enableRobotsTXT: true
+timeZone: Asia/Shanghai
+
+languages:
+  zh:
+    label: 简体中文
+    locale: zh-CN
+    weight: 1
+    title: *siteTitle
+    hasCJKLanguage: true
+    params:
+      description: 从一组方程开始，沿着旧办法遇到的边界，逐步重建线性代数。
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+      wrapStandAloneImageWithinParagraph: false
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+  highlight:
+    noClasses: false
+
+outputs:
+  home: [HTML, RSS, markdown, LLMS]
+  page: [HTML, markdown]
+  section: [HTML, RSS, print, markdown]
+
+params:
+  offline_search: true
+  copyright:
+    authors: 教程作者与贡献者
+    from_year: 2026
+  footer_center_info: 本教程按 evo-learn 方法组织
+  ui:
+    dark_mode: true
+    typography: technical
+    theme_color: '#245f94'
+    sidebar_menu_foldable: true
+    sidebar_headings: 3
+    backlinks: true
+
+module:
+  imports:
+    - path: github.com/pgsty/oink
+  hugoVersion:
+    extended: true
+    min: 0.160.1

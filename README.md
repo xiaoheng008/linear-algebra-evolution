@@ -1,30 +1,32 @@
-# 线性代数：从问题到系统
+# 线性代数如何长出来
 
-这是一套从问题出发、逐步重建线性代数的教程。我们不先列定义和公式，而是追问：已有方法遇到了什么困难，什么观察催生了新概念，这个概念又让我们能够提出什么新问题？
+从一组方程开始，沿着旧办法遇到的边界，亲手重建矩阵、向量、空间与变换。副标题：从方程的困境到空间、变换与数据。
 
-教程面向学过基础代数、但不要求有线性代数基础的读者。这里重建的是概念之间的认知路径，不声称复现数学史上的真实先后顺序。
+## 阅读
 
-## 从哪里开始
+在线书使用 Hugo + OINK 的 Book 内容模式，支持章节导航、全文搜索、公式、打印视图与移动端阅读。
 
-按 [学习路线](docs/SUMMARY.md) 顺序阅读 `docs/book/`。每章会从一个具体问题开始，安排尝试和观察，再给概念命名并严格推导。遇到练习时，建议先写下自己的推理；提示应从最小的一步开始看。
-
-## 目录
-
-- `docs/book/`：教程正文
-- `docs/exercises/`：回忆、推导、应用和重建练习
-- `docs/experiments/`：可运行的 NumPy / Matplotlib 探索脚本
-- `docs/evolution-map.md`：概念依赖与因果压力图
-
-运行实验需要 Python、NumPy 和 Matplotlib。例如：
+本地预览：
 
 ```bash
-python docs/experiments/01_equations.py
+hugo server
 ```
 
-## 项目状态
+本地环境要求 Git、Go 1.27+ 和 Hugo Extended 0.165.0+。主题作为 Go module 固定在 OINK v1.1.0；无需 Node.js 或 npm。
 
-当前为 Phase 1：建立从方程、消元到矩阵、向量和线性组合的第一段因果链。后续章节会在这段基础上继续演化。
+## 内容结构
 
-## 许可
+- `content/book/`：书籍首页、章节与练习；目录结构就是阅读顺序
+- `content/docs/`：学习路线与概念演化图
+- `experiments/`：NumPy / Matplotlib 实验源码
+- `data/home/zh.yaml`：中文首页内容
+- `hugo.yaml`、`go.mod`、`go.sum`：站点与固定版本的主题配置
 
-教程文字采用 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)；实验代码采用 MIT License。详见 [LICENSE](LICENSE)。
+严格生产构建：
+
+```bash
+hugo --cleanDestinationDir --gc --minify --environment production \
+  --printPathWarnings --panicOnWarning
+```
+
+推送到 `main` 后，GitHub Actions 使用 Hugo Extended 构建并部署到 GitHub Pages。

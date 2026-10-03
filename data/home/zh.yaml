@@ -1,0 +1,37 @@
+sections: [hero, cards, cta]
+
+hero:
+  align: center
+  eyebrow: 从问题到能力 · 一条可重建的学习路径
+  title_lines:
+    - words: [{ text: 线性代数 }]
+    - words: [{ text: 如何长出来 }]
+  lead: 从一组方程开始。每当旧办法撞上边界，新的数学对象才登场：矩阵、向量、空间、变换，以及理解数据的工具。
+  actions:
+    - { label: 开始阅读, url: book/, icon: fa-solid fa-book-open, style: primary }
+    - { label: 看能力生长路线, url: docs/roadmap/, icon: fa-solid fa-diagram-project, style: ghost }
+
+cards:
+  eyebrow: 不是术语清单
+  title: 一种能力，解决问题，也制造新问题
+  columns: 3
+  items:
+    - title: 一条因果路线
+      desc: 约束需要简化，简化暴露结构，结构又带来新的可问之事。
+      icon: fa-solid fa-route
+      url: book/
+    - title: 推导与实验
+      desc: 先尝试旧办法，观察它在哪里失效，再亲自推出新表示。
+      icon: fa-solid fa-flask
+      url: book/ch01/
+    - title: 重建理解
+      desc: 不止会用定义；忘掉术语后，仍能从问题重新长出它。
+      icon: fa-solid fa-puzzle-piece
+      url: book/exercises/
+
+cta:
+  title: 从一组约束开始。
+  text: 先问哪些条件能同时成立，再看消元会暴露什么新问题。
+  label: 阅读序言
+  url: book/ch00/
+  style: primary
