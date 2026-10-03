@@ -57,7 +57,7 @@ weight: 50
 
 ## 实验
 
-打开[向量 Notebook](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/04_vectors.ipynb)，先猜加法和数乘的结果，再运行代码核对。图形会把二维例子画成箭头；记得，向量也能记录和空间无关的数据。Notebook 也可下载到本地运行。
+打开[向量交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/04_vectors.ipynb)，先猜加法和数乘的结果，再运行代码核对。图形会把二维例子画成箭头；记得，向量也能记录和空间无关的数据。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/04_vectors.ipynb)在本地运行。
 
 ## 下一步：矩阵怎样把输入变成输出？
 

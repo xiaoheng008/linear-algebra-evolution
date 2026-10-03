@@ -74,7 +74,7 @@ A=\begin{bmatrix}2&-1\\1&3\end{bmatrix}.
 
 ## 实验
 
-打开[矩阵方程 Notebook](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/03_matrix_system.ipynb)，逐行填写系数、预测 `Ax`，再运行代码核对；也可以下载 Notebook 本地运行。
+打开[矩阵方程交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/03_matrix_system.ipynb)，逐行填写系数、预测 `Ax`，再运行代码核对。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/03_matrix_system.ipynb)在本地运行。
 
 ## 下一步：矩阵把输入变成了什么？
 

@@ -115,7 +115,7 @@ a_1x_1+a_2x_2+\cdots+a_nx_n=b
 
 ## 实验
 
-打开[方程组 Notebook](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/01_equations.ipynb)，先改右端的数字，猜猜两条线会相交、平行还是重合，再运行代码看看。也可以下载[Notebook 源码](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/01_equations.ipynb)在本地运行。
+打开[方程组交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/01_equations.ipynb)，先改右端的数字，猜猜两条线会相交、平行还是重合，再运行代码看看。想在本地运行，可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/01_equations.ipynb)。
 
 ## 下一步：怎样稳定地做这类化简？
 

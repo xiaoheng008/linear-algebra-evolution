@@ -62,7 +62,7 @@ A\mathbf{x}=\sum_{j=1}^n x_j\mathbf{a}_j.
 
 ## 实验
 
-打开[列组合 Notebook](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先手算这个例子，再拖动滑块改输入。看看输出怎样跟着变，以及两列怎样拼出它。Notebook 也可下载到本地运行。
+打开[列组合交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先手算这个例子，再拖动滑块改输入。看看输出怎样跟着变，以及两列怎样拼出它。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)在本地运行。
 
 ## 下一步：这些列一共能生成哪些输出？
 

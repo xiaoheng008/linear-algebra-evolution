@@ -64,7 +64,7 @@ x+y=2,\\
 
 ## 实验
 
-打开[消元 Notebook](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/02_elimination.ipynb)，先自己做一遍消元，再运行代码核对。试着分别造出唯一解、无解和无穷多解的例子。Notebook 也可以下载到本地运行。
+打开[消元交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/02_elimination.ipynb)，先自己做一遍消元，再运行代码核对。试着分别造出唯一解、无解和无穷多解的例子。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/02_elimination.ipynb)在本地运行。
 
 ## 下一步：这些反复出现的系数能收进一个对象吗？
 
