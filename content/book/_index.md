@@ -5,6 +5,7 @@ type: book
 book_number: I
 cascade:
   type: book
+  hide_summary: true
 outputs: [HTML, print, markdown]
 menus:
   main:

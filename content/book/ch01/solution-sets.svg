@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 430" role="img" aria-labelledby="title desc">
+  <title id="title">Two equation solution sets and their intersection</title>
+  <desc id="desc">The lines x plus y equals 5 and 2x minus y equals 1 intersect at the unique solution (2, 3).</desc>
+  <rect width="640" height="430" fill="#fff"/>
+  <g stroke="#e5e9ed" stroke-width="1">
+    <path d="M80 40V360M151 40V360M223 40V360M294 40V360M366 40V360M437 40V360M509 40V360M580 40V360"/>
+    <path d="M80 40H580M80 80H580M80 120H580M80 160H580M80 200H580M80 240H580M80 280H580M80 320H580M80 360H580"/>
+  </g>
+  <g stroke="#4b5563" stroke-width="1.5">
+    <path d="M80 320H594"/>
+    <path d="M151 360V28"/>
+  </g>
+  <g fill="#4b5563" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">
+    <text x="151" y="382">0</text><text x="223" y="382">1</text><text x="294" y="382">2</text>
+    <text x="366" y="382">3</text><text x="437" y="382">4</text><text x="509" y="382">5</text><text x="580" y="382">6</text>
+    <text x="132" y="364">-1</text><text x="132" y="324">0</text><text x="132" y="284">1</text>
+    <text x="132" y="244">2</text><text x="132" y="204">3</text><text x="132" y="164">4</text>
+    <text x="132" y="124">5</text><text x="132" y="84">6</text><text x="132" y="44">7</text>
+  </g>
+  <text x="598" y="324" fill="#374151" font-family="Arial, sans-serif" font-size="15">x</text>
+  <text x="151" y="20" fill="#374151" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">y</text>
+  <path d="M80 80L580 360" fill="none" stroke="#087e8b" stroke-width="3"/>
+  <path d="M151 360L437 40" fill="none" stroke="#d05a47" stroke-width="3"/>
+  <circle cx="294" cy="200" r="6" fill="#1f2937" stroke="#fff" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="600">
+    <text x="430" y="290" fill="#087e8b">S1: x + y = 5</text>
+    <text x="366" y="76" fill="#b34434">S2: 2x - y = 1</text>
+    <text x="306" y="190" fill="#1f2937">(2, 3)</text>
+  </g>
+</svg>
