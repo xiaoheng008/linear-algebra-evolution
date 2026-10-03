@@ -29,7 +29,17 @@ x+3y=7
 \begin{bmatrix}1\\7\end{bmatrix}.
 \]
 
-这只是记号压缩吗？先试着按行展开：第一行读成 `2x-y=1`，第二行读成 `x+3y=7`，正好还原原系统。
+这只是记号压缩吗？先不要接受新记号，逐行把它读回熟悉的方程。
+
+**第 1 步：读第一行。** 第一行的两个系数分别乘输入中的哪个数？
+
+> [!DETAILS] 对照
+> 第一行给出 `2x+(-1)y=1`，也就是 `2x−y=1`。
+
+**第 2 步：读第二行。** 用同样规则检查它是否还原成原系统的第二条约束。
+
+> [!DETAILS] 对照
+> 第二行给出 `1x+3y=7`，即 `x+3y=7`。压缩没有丢掉方程，只是把重复的系数排列集中保存。
 
 ## 压力：数字表本身还没有说明它做什么
 
@@ -51,7 +61,7 @@ A=\begin{bmatrix}2&-1\\1&3\end{bmatrix}.
 
 ## 能力升级：把整个系统作为一个对象运算
 
-对 `A` 的每一行分别与 `x` 中对应未知量相乘并求和：
+现在逐行展开 `Ax`。先看第一行：它会产生什么表达式？再看第二行。
 
 \[
 \begin{bmatrix}2&-1\\1&3\end{bmatrix}
@@ -60,11 +70,11 @@ A=\begin{bmatrix}2&-1\\1&3\end{bmatrix}.
 \begin{bmatrix}2x-y\\x+3y\end{bmatrix}.
 \]
 
-令它等于 `b=[1,7]^T`，就得到原来的两条方程。因此矩阵表示与方程组逐行等价，并非丢掉了方程信息。
+令展开结果等于 `b=[1,7]^T`，就得到原来的两条方程。因此矩阵表示与方程组逐行等价，并非丢掉了方程信息。读到这里，你已经能自行完成“矩阵行 → 一条约束”的翻译。
 
 ## 实验
 
-运行 [03_matrix_system.py](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/03_matrix_system.py)，改变系数矩阵或右端向量，观察解如何变化。
+打开[矩阵方程 Notebook](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/03_matrix_system.ipynb)，逐行填写系数、预测 `Ax`，再运行代码核对；也可以下载 Notebook 本地运行。
 
 ## 新问题：矩阵究竟怎样作用于一组输入？
 

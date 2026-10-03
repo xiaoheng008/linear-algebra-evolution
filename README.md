@@ -12,13 +12,22 @@
 hugo server
 ```
 
+本地运行实验：
+
+```bash
+python -m pip install -r experiments/requirements.txt
+jupyter lab
+```
+
+也可以在每章的实验链接中直接用 Google Colab 打开 Notebook。
+
 本地环境要求 Git、Go 1.27+ 和 Hugo Extended 0.165.0+。主题作为 Go module 固定在 OINK v1.1.0；无需 Node.js 或 npm。
 
 ## 内容结构
 
 - `content/book/`：书籍首页、章节与练习；目录结构就是阅读顺序
 - `content/docs/`：学习路线与概念演化图
-- `experiments/`：NumPy / Matplotlib 实验源码
+- `experiments/`：逐步引导、可交互运行的 Jupyter notebooks
 - `data/home/zh.yaml`：中文首页内容
 - `hugo.yaml`、`go.mod`、`go.sum`：站点与固定版本的主题配置
 

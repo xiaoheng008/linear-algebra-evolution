@@ -18,20 +18,25 @@ A=\begin{bmatrix}1&2\\3&1\end{bmatrix},\qquad
 
 ## 先按行计算，再按输入坐标重新分组
 
-先按行计算：
+先只算输出的第一个坐标。矩阵第一行与输入做什么运算？
 
-\[
-A\mathbf{x}=\begin{bmatrix}1\cdot4+2\cdot(-1)\\3\cdot4+1\cdot(-1)\end{bmatrix}
-=\begin{bmatrix}2\\11\end{bmatrix}.
-\]
+> [!DETAILS] 第一个坐标
+> `1·4+2·(−1)=2`。先把这个结果记下来，不急着概括。
 
-现在把同一计算按输入坐标重新分组：
+再看第二行：同样的规则会给出什么？
 
-\[
-A\mathbf{x}
-=4\begin{bmatrix}1\\3\end{bmatrix}
--1\begin{bmatrix}2\\1\end{bmatrix}.
-\]
+> [!DETAILS] 第二个坐标
+> `3·4+1·(−1)=11`。所以 `A x=[2,11]^T`。
+
+现在停一下：每个输出坐标是用矩阵的“行”算出来的。但输入中的 `4` 和 `−1`，分别乘上了矩阵的哪些数字？试着按输入坐标重新分组：
+
+> [!DETAILS] 把乘法重新排一排
+> \[
+> A\mathbf{x}=4\begin{bmatrix}1\\3\end{bmatrix}+(-1)\begin{bmatrix}2\\1\end{bmatrix}
+> =\begin{bmatrix}4\\12\end{bmatrix}+\begin{bmatrix}-2\\-1\end{bmatrix}
+> =\begin{bmatrix}2\\11\end{bmatrix}.
+> \]
+> `4` 乘第一列，`−1` 乘第二列；两列相加后，回到刚才按行算出的同一个输出。
 
 ## 关键观察：每个输入坐标控制矩阵的一列
 
@@ -57,7 +62,7 @@ A\mathbf{x}=\sum_{j=1}^n x_j\mathbf{a}_j.
 
 ## 实验
 
-运行 [05_column_combination.py](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.py)，拖动输入坐标的取值，观察矩阵的列如何加权形成输出。
+打开[列组合 Notebook](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先手算，再用滑块改变输入坐标，观察矩阵的列如何组合成输出；Notebook 也可下载到本地运行。
 
 ## 新问题：所有可能的输出究竟构成什么？
 
