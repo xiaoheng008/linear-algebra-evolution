@@ -23,10 +23,9 @@ x+3y=7
 暂时把系数表、未知量和结果分开写：
 
 \[
-\begin{bmatrix}2&-1\\1&3\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}
-=
-\begin{bmatrix}1\\7\end{bmatrix}.
+A=\begin{bmatrix}2&-1\\1&3\end{bmatrix},\qquad
+\mathbf{x}=\begin{bmatrix}x\\y\end{bmatrix},\qquad
+\mathbf{b}=\begin{bmatrix}1\\7\end{bmatrix}.
 \]
 
 这只是记号压缩吗？先不要接受新记号，逐行把它读回熟悉的方程。
@@ -64,10 +63,8 @@ A=\begin{bmatrix}2&-1\\1&3\end{bmatrix}.
 我们来验一下这个记号。按矩阵乘法逐行计算，第一行和第二行分别会得到什么？
 
 \[
-\begin{bmatrix}2&-1\\1&3\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}
-=
-\begin{bmatrix}2x-y\\x+3y\end{bmatrix}.
+A\begin{bmatrix}x\\y\end{bmatrix}
+=\begin{bmatrix}2x-y\\x+3y\end{bmatrix}.
 \]
 
 令它等于 `b=[1,7]^T`，正好回到原来的两条方程。矩阵没有替我们解方程；它只是把系数组织起来，让我们更方便地处理整个系统。
