@@ -89,6 +89,20 @@ A\mathbf{x}=\sum_{j=1}^n x_j\mathbf{a}_j.
 
 所以“根据 `A` 和给定的 `x` 求 `b`”并不是另一种解方程。它是在执行矩阵规定的计算；反过来求 `x`，才是在问哪些输入会产生指定输出。
 
+## 回到房价模型
+
+[第三章]({{< relref "/book/ch03" >}})用两套房的已知价格，求出面积和距离的系数 `x=(2,−10)`。当时两套房各给出一条关于系数的约束，求 `x` 就是找这些约束的共同解。
+
+系数确定以后，面积 90 平方米、距离 0.5 公里的丙房可以直接算出模型价格：
+
+\[
+\begin{bmatrix}90&0.5\end{bmatrix}
+\begin{bmatrix}2\\-10\end{bmatrix}
+=\begin{bmatrix}175\end{bmatrix}.
+\]
+
+这一行房屋数据是 `A`，两项模型系数是 `x`，算出的价格是 `b`。这里已知 `A,x`，待求 `b`。把两种问题放在一起看：有房屋数据和价格，就求能解释它们的系数；有房屋数据和系数，就算模型给出的价格。
+
 ## 实验
 
 打开[列组合交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先按 Notebook 给出的矩阵和输入，分别用行、列两种方式手算输出，再运行代码核对。随后改变输入，观察列的倍数变了，输出怎样跟着变。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)在本地运行。
