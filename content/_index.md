@@ -29,4 +29,4 @@ description: 从一组方程开始，沿着旧办法遇到的边界，逐步重�
 
 [知道基的去向，就能算所有输入吗？]({{< relref "/book/ch10" >}}) · [两次变换，怎样合成一次？]({{< relref "/book/ch11" >}})
 
-辅助索引：[概念演化图]({{< relref "/docs/evolution-map" >}}) · [阶段练习与渐进提示]({{< relref "/book/exercises" >}})
+辅助索引：[概念演化图]({{< relref "/docs/evolution-map" >}}) · [应用例子]({{< relref "/docs/examples" >}}) · [阶段练习与渐进提示]({{< relref "/book/exercises" >}})

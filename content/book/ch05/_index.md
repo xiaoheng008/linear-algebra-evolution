@@ -103,6 +103,24 @@ A\mathbf{x}=\sum_{j=1}^n x_j\mathbf{a}_j.
 
 这一行房屋数据是 `A`，两项模型系数是 `x`，算出的价格是 `b`。这里已知 `A,x`，待求 `b`。把两种问题放在一起看：有房屋数据和价格，就求能解释它们的系数；有房屋数据和系数，就算模型给出的价格。
 
+## 同一张成分表，既能查配方，也能算产出
+
+把第一章的原料数据排成矩阵：行按“蛋白质、脂肪”，列按“甲、乙”。
+
+\[
+A=\begin{bmatrix}10&20\\20&10\end{bmatrix},\qquad
+\mathbf{x}=\begin{bmatrix}1\\2\end{bmatrix},\qquad
+A\mathbf{x}=\begin{bmatrix}50\\40\end{bmatrix}=\mathbf{b}.
+\]
+
+`A` 的每个数是每 100 克原料贡献的成分克数；`x` 的每个数是使用多少个 100 克；`b` 的每个数是混合后的成分克数。
+
+按行读，第一行算蛋白质总量，第二行算脂肪总量。按列读，第一列是甲的一份成分，第二列是乙的一份成分；取一份甲、两份乙，再合起来。
+
+若已知想要 `b=(50,40)`，不知道配方 `x`，就解方程组。若已经选定 `x=(2,1)`，则无需解方程，直接算出 `b=(40,50)`。先猜这两项为什么对调了，再按行核对。
+
+房价模型中的 `x` 是待估计的模型系数，这里 `x` 是原料用量。它们在各自问题里含义不同，但都处在矩阵计算的输入位置。
+
 ## 实验
 
 打开[列组合交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先按 Notebook 给出的矩阵和输入，分别用行、列两种方式手算输出，再运行代码核对。随后改变输入，观察列的倍数变了，输出怎样跟着变。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)在本地运行。

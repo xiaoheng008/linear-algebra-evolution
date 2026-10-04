@@ -55,6 +55,34 @@ weight: 90
 
 为什么一组基给出的坐标不会有两套？假如同一个向量有两种表示，把它们相减，就得到一组向量的线性组合等于零。基里的向量线性无关，差出来的系数只能全为零；两套坐标因此相同。
 
+## 双声道：分别记录左右，还是记录共同与差别？
+
+第四章把同一时刻的左右采样值记成 `(L,R)`。用标准基记录，就是 `L e_1+R e_2`。现在换成刚才的 `p=(1,1)`、`q=(1,−1)`：`p` 同时给两边相同信号，`q` 给两边相反信号。
+
+设它们的系数是 `M,S`，那么
+
+\[
+\begin{bmatrix}L\\R\end{bmatrix}
+=M\begin{bmatrix}1\\1\end{bmatrix}
++S\begin{bmatrix}1\\-1\end{bmatrix},\qquad
+L=M+S,\quad R=M-S.
+\]
+
+所以 `M=(L+R)/2`，记录两边共同的部分；`S=(L−R)/2`，记录两边的差别。这是一种双声道的中间/侧边表示，这里明确采用除以 2 的刻度。
+
+沿用主例子 `(L,R)=(3,1)`，新坐标是 `(M,S)=(2,1)`。采样值用任意单位记录。用它们重建，左边 `2+1=3`，右边 `2−1=1`。只是换一种记录方式，信号没有变。
+
+再试 `(L,R)=(2,2)` 与 `(2,−2)`。哪一个只需要 `p`，哪一个只需要 `q`？如果把 `S` 丢掉，能否恢复所有双声道采样值？
+
+> [!DETAILS] 检查删去一个坐标的代价
+> `(2,2)=2p`，`(2,−2)=2q`。只留下 `M` 时，左右差别丢失。例如 `(3,1)` 与 `(2,2)` 都有 `M=2`，无法再把它们区分开。完整记录需要两个基坐标。
+
+![双声道原波形、换基后的共同与差别波形，以及丢掉差别坐标后无法恢复原左声道的对照](stereo-basis.png)
+
+图中的横轴是时间，纵轴是采样值。第一幅是左右声道 `L,R`；第二幅是同一信号的两个新坐标 `M,S`；第三幅对比原左声道与丢掉 `S` 后的左声道。换基保留完整信息，删掉一个基坐标则一般无法恢复原波形。
+
+可以在[双声道实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)中对一整段波形做同样的换基与重建，再看丢掉差别坐标后哪些信息无法恢复。
+
 ## 试着删掉重复，再换一组基
 
 打开[基与坐标实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/08_basis.ipynb)，先拖动滑块改变三支向量的系数，观察系数不断变化、结果却保持不变；再对比同一目标在两组基下的坐标。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/08_basis.ipynb)在本地运行。
