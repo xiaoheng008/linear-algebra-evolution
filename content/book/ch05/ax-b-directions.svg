@@ -1,39 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
-  <title id="title">Ax=b 的正向计算与反向求解</title>
-  <desc id="desc">上方给定交点 x 等于二、三，代入两行得到 b 等于五、一；下方给定 b 等于五、一，通过两个方程的交集找回 x 等于二、三。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">同一组方程的两种方向</title>
+  <desc id="desc">平面上的直线 x 加 y 等于 5 与 2x 减 y 等于 1 相交于 (2,3)。将交点代入两行分别得到 5 和 1；反过来，给出右端 5 和 1，交点就是解。</desc>
   <defs>
-    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M0 0 10 5 0 10Z" fill="#2878a5"/>
-    </marker>
-    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M0 0 10 5 0 10Z" fill="#c4512d"/>
-    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #253342; }
+      .grid { stroke: #dce3e8; stroke-width: 1; }
+      .axis { stroke: #64748b; stroke-width: 1.6; }
+      .blue { stroke: #1769aa; fill: #1769aa; }
+      .orange { stroke: #c45a16; fill: #c45a16; }
+    </style>
   </defs>
-  <rect width="960" height="430" rx="12" fill="#f5f7f8"/>
-  <text x="40" y="52" fill="#263746" font-family="sans-serif" font-size="24" font-weight="700">正向计算：给定交点，算出每行的结果</text>
-  <rect x="52" y="82" width="190" height="92" rx="8" fill="#e3f0f7" stroke="#2878a5" stroke-width="2"/>
-  <text x="147" y="116" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="17">给定点 x</text>
-  <text x="147" y="149" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="25" font-weight="700">(2, 3)</text>
-  <path d="M255 128H365" fill="none" stroke="#2878a5" stroke-width="3" marker-end="url(#arrow-blue)"/>
-  <rect x="380" y="82" width="205" height="92" rx="8" fill="#e8eee8" stroke="#62836b" stroke-width="2"/>
-  <text x="482" y="114" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="17">分别代入两行</text>
-  <text x="482" y="147" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="18">2+3　　2×2−3</text>
-  <path d="M598 128H708" fill="none" stroke="#c4512d" stroke-width="3" marker-end="url(#arrow-orange)"/>
-  <rect x="724" y="82" width="190" height="92" rx="8" fill="#f8e9e2" stroke="#c4512d" stroke-width="2"/>
-  <text x="819" y="116" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="17">算得右端 b</text>
-  <text x="819" y="149" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="25" font-weight="700">(5, 1)</text>
+  <rect width="1200" height="520" fill="#fff"/>
+  <text x="40" y="42" font-size="22" font-weight="650">两条直线的交点</text>
+  <g class="grid">
+    <path d="M85 40V400 M180 40V400 M275 40V400 M370 40V400 M465 40V400 M560 40V400"/>
+    <path d="M85 400H560 M85 340H560 M85 280H560 M85 220H560 M85 160H560 M85 100H560 M85 40H560"/>
+  </g>
+  <path class="axis" d="M85 340H580 M180 420V25"/>
+  <g font-size="13" fill="#64748b" text-anchor="middle">
+    <text x="85" y="425">−1</text><text x="180" y="425">0</text><text x="275" y="425">1</text><text x="370" y="425">2</text><text x="465" y="425">3</text><text x="560" y="425">4</text>
+  </g>
+  <g font-size="13" fill="#64748b" text-anchor="end">
+    <text x="168" y="405">−1</text><text x="168" y="345">0</text><text x="168" y="285">1</text><text x="168" y="225">2</text><text x="168" y="165">3</text><text x="168" y="105">4</text><text x="168" y="45">5</text>
+  </g>
+  <text x="570" y="361" font-size="14">x</text>
+  <text x="190" y="25" font-size="14">y</text>
+  <path d="M180 40L560 280" class="blue" stroke-width="4" fill="none"/>
+  <path d="M180 400L465 40" class="orange" stroke-width="4" fill="none"/>
+  <circle cx="370" cy="160" r="7" fill="#172b3a" stroke="#fff" stroke-width="3"/>
+  <path d="M378 155L415 130" stroke="#172b3a" stroke-width="1.5"/>
+  <rect x="412" y="105" width="82" height="34" rx="3" fill="#fff" stroke="#cbd5dc"/>
+  <text x="453" y="128" text-anchor="middle" font-size="18" font-weight="650">(2, 3)</text>
 
-  <path d="M40 207H920" stroke="#d5dde2" stroke-width="1.5"/>
-  <text x="40" y="251" fill="#263746" font-family="sans-serif" font-size="24" font-weight="700">反向求解：给定每行的目标，找交点</text>
-  <rect x="52" y="280" width="190" height="92" rx="8" fill="#f8e9e2" stroke="#c4512d" stroke-width="2"/>
-  <text x="147" y="314" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="17">给定目标 b</text>
-  <text x="147" y="347" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="25" font-weight="700">(5, 1)</text>
-  <path d="M255 326H365" fill="none" stroke="#c4512d" stroke-width="3" marker-end="url(#arrow-orange)"/>
-  <rect x="380" y="280" width="205" height="92" rx="8" fill="#e8eee8" stroke="#62836b" stroke-width="2"/>
-  <text x="482" y="312" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="17">同时满足两行</text>
-  <text x="482" y="345" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="18">x+y=5　2x−y=1</text>
-  <path d="M598 326H708" fill="none" stroke="#2878a5" stroke-width="3" marker-end="url(#arrow-blue)"/>
-  <rect x="724" y="280" width="190" height="92" rx="8" fill="#e3f0f7" stroke="#2878a5" stroke-width="2"/>
-  <text x="819" y="314" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="17">交点 x</text>
-  <text x="819" y="347" text-anchor="middle" fill="#263746" font-family="sans-serif" font-size="25" font-weight="700">(2, 3)</text>
+  <path d="M680 55V465" stroke="#d5dde3" stroke-width="1.5"/>
+  <text x="725" y="78" font-size="20" font-weight="650">已知交点，逐行算出 b</text>
+  <text x="730" y="142" font-size="22" class="blue" font-weight="600">x + y = 5</text>
+  <text x="730" y="177" font-size="18">2 + 3 = </text>
+  <rect x="821" y="150" width="48" height="38" rx="4" fill="#eaf3fa"/>
+  <text x="845" y="177" text-anchor="middle" font-size="22" class="blue" font-weight="700">5</text>
+  <text x="730" y="240" font-size="22" class="orange" font-weight="600">2x − y = 1</text>
+  <text x="730" y="275" font-size="18">2 × 2 − 3 = </text>
+  <rect x="852" y="248" width="48" height="38" rx="4" fill="#fbefe7"/>
+  <text x="876" y="275" text-anchor="middle" font-size="22" class="orange" font-weight="700">1</text>
+  <path d="M730 315H1115" stroke="#d5dde3" stroke-width="1.5"/>
+  <text x="730" y="355" font-size="18" fill="#536273">反过来，给定 b = (5, 1)：</text>
+  <text x="730" y="393" font-size="18">两行分别成为图中的两条直线。</text>
+  <text x="730" y="431" font-size="18">它们的交点 (2, 3)，就是方程组的解。</text>
 </svg>

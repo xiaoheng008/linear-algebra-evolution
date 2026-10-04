@@ -7,17 +7,17 @@ weight: 70
 
 ## 先把刚才的计算倒过来问
 
-第五章里，矩阵的列是
+第五章里，矩阵的两列是
 
 \[
-\mathbf{a}_1=\begin{bmatrix}1\\3\end{bmatrix},\qquad
-\mathbf{a}_2=\begin{bmatrix}2\\1\end{bmatrix}.
+\mathbf{a}_1=\begin{bmatrix}1\\2\end{bmatrix},\qquad
+\mathbf{a}_2=\begin{bmatrix}1\\-1\end{bmatrix}.
 \]
 
-输入的两个坐标告诉我们各取几倍。比如输入 `[-1, 3]`，输出就是
+输入 `x=(2,3)` 告诉我们各取几倍，输出就是第五章算过的 `b=(5,1)`：
 
 \[
--\mathbf{a}_1+3\mathbf{a}_2=\begin{bmatrix}5\\0\end{bmatrix}.
+2\mathbf{a}_1+3\mathbf{a}_2=\begin{bmatrix}5\\1\end{bmatrix}.
 \]
 
 现在把问题倒过来：给你一个目标向量 `b`，能不能挑出合适的倍数，让这些列拼出 `b`？
