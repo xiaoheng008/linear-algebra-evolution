@@ -48,7 +48,8 @@ params:
     typography: technical
     theme_color: '#245f94'
     sidebar_menu_foldable: true
-    sidebar_headings: 3
+    sidebar_headings: false
+    sidebar_item_overflow: wrap
     backlinks: true
 
 module:
