@@ -19,7 +19,7 @@ description: 从一组方程开始，沿着旧办法遇到的边界，逐步重�
 → 追问变换保留什么、丢失什么，逼出**秩、零空间与特征结构**
 → 当精确解不存在，转向**投影、最小二乘与 SVD**
 
-目前已写到第十一章：**从方程的解集，到基、维数、线性变换与矩阵乘法**。逆矩阵及后续章节仍在编写。
+全书初稿已完成：**序言、25 章正文与四组阶段练习**，从方程的解集一路走到变换、近似与数据降维。每章都有可运行的 Jupyter 实验。
 
 ## 当前篇章：方程为何变成结构
 
@@ -28,5 +28,17 @@ description: 从一组方程开始，沿着旧办法遇到的边界，逐步重�
 [哪些目标能拼出来？]({{< relref "/book/ch06" >}}) · [多一列带来什么？]({{< relref "/book/ch07" >}}) · [怎样选一组基？]({{< relref "/book/ch08" >}}) · [换基后，个数会变吗？]({{< relref "/book/ch09" >}})
 
 [知道基的去向，就能算所有输入吗？]({{< relref "/book/ch10" >}}) · [两次变换，怎样合成一次？]({{< relref "/book/ch11" >}})
+
+## 变换与解的结构
+
+[能撤销变换吗？]({{< relref "/book/ch12" >}}) · [怎样写出所有解？]({{< relref "/book/ch13" >}}) · [看见与丢掉几个方向？]({{< relref "/book/ch14" >}}) · [阶段练习]({{< relref "/book/checkpoint-space" >}})
+
+[反复变换往哪里走？]({{< relref "/book/ch15" >}}) · [面积与行列式]({{< relref "/book/ch16" >}}) · [换成特征方向]({{< relref "/book/ch17" >}}) · [阶段练习]({{< relref "/book/checkpoint-dynamics" >}})
+
+## 误差、近似与数据
+
+[怎样比较接近程度？]({{< relref "/book/ch18" >}}) · [最近的可达点]({{< relref "/book/ch19" >}}) · [怎样拟合观测？]({{< relref "/book/ch20" >}}) · [正交化与 QR]({{< relref "/book/ch21" >}})
+
+[输入输出各选一组基]({{< relref "/book/ch22" >}}) · [少留几个方向]({{< relref "/book/ch23" >}}) · [主成分与降维]({{< relref "/book/ch24" >}}) · [阶段练习]({{< relref "/book/checkpoint-approximation" >}}) · [从问题完整重建]({{< relref "/book/ch25" >}})
 
 辅助索引：[概念演化图]({{< relref "/docs/evolution-map" >}}) · [应用例子]({{< relref "/docs/examples" >}}) · [阶段练习与渐进提示]({{< relref "/book/exercises" >}})

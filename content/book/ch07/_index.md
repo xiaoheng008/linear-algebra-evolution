@@ -7,7 +7,7 @@ weight: 80
 
 ## 先看这两列
 
-上一章用这两个向量试着拼目标：
+上一章，我们用这两个向量试着拼目标：
 
 \[
 \mathbf{u}=\begin{bmatrix}1\\2\end{bmatrix},\qquad
@@ -38,7 +38,7 @@ c_1\mathbf{u}+c_2\mathbf{v}
 
 ## 怎样检查这种重复？
 
-把刚才两种表示相减，结果为零：
+我们把刚才两种表示相减，看看不同的系数为何能给出相同结果：
 
 \[
 -2\mathbf{u}+\mathbf{v}=\mathbf{0}.

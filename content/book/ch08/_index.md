@@ -7,7 +7,7 @@ weight: 90
 
 ## 先列出所有能用的方向
 
-在平面里，取三支向量：
+我们在平面里取三支向量，试试哪些真的不可少：
 
 \[
 \mathbf{e}_1=\begin{bmatrix}1\\0\end{bmatrix},\qquad
@@ -31,7 +31,7 @@ weight: 90
 
 ## 基不同，坐标也会不同
 
-基不一定非得是水平和竖直方向。再取
+基不一定非得是水平和竖直方向。我们再取
 
 \[
 \mathbf{p}=\begin{bmatrix}1\\1\end{bmatrix},\qquad

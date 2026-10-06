@@ -7,7 +7,7 @@ weight: 60
 
 ## 回到第一章的交点
 
-第一章解过这组方程：
+我们在第一章解过这组方程：
 
 \[
 \begin{cases}
@@ -48,7 +48,7 @@ A\mathbf{x}=\begin{bmatrix}1&1\\2&-1\end{bmatrix}
 
 ## 同一次计算，按列重排
 
-刚才按行看，每一行各算一个输出。现在按输入中的数重新分组。把 `x` 的第一项 2 与矩阵第一列相乘，把第二项 3 与第二列相乘，再把两列相加：
+刚才我们按行看，每一行各算一个输出。现在换个分组方式：把 `x` 的第一项 2 与矩阵第一列相乘，把第二项 3 与第二列相乘，再把两列相加：
 
 \[
 2\begin{bmatrix}1\\2\end{bmatrix}
@@ -123,7 +123,7 @@ A\mathbf{x}=\begin{bmatrix}50\\40\end{bmatrix}=\mathbf{b}.
 
 ## 实验
 
-打开[列组合交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先按 Notebook 给出的矩阵和输入，分别用行、列两种方式手算输出，再运行代码核对。随后改变输入，观察列的倍数变了，输出怎样跟着变。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)在本地运行。
+打开[列组合交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先按实验给出的矩阵和输入，分别用行、列两种方式手算输出，再运行代码核对。随后改变输入，观察列的倍数变了，输出怎样跟着变。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)在本地运行。
 
 ## 下一步：这些列一共能生成哪些输出？
 
