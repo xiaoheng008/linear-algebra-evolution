@@ -8,11 +8,15 @@ weight: 30
 
 | 场景 | 要回答的问题 | 章节 |
 |---|---|---|
+| 增加丙原料、改变成分记录 | 为什么多一种原料未必多一个方向？增加总质量要求后呢？ | [线性相关]({{< relref "/book/ch07" >}})、[基与坐标]({{< relref "/book/ch08" >}})、[维数]({{< relref "/book/ch09" >}}) |
+| 两根斜绳托住物体 | 两个方向的力怎样相加？哪些合力能由非负拉力实现？ | [向量]({{< relref "/book/ch04" >}})、[列组合]({{< relref "/book/ch05" >}})、[张成]({{< relref "/book/ch06" >}}) |
+| 再增加一根竖直绳 | 合力不变时，拉力能怎样分配？平衡条件为什么还不够？ | [解集与零空间]({{< relref "/book/ch13" >}}) |
+| 恒力与直线位移 | 力变大了，做功一定更多吗？垂直分量为什么不做功？ | [内积]({{< relref "/book/ch18" >}}) |
 | 两种原料混合 | 用量怎样同时满足两项成分要求？数学解是否可用？ | [方程组]({{< relref "/book/ch01" >}})、[消元]({{< relref "/book/ch02" >}})、[列组合]({{< relref "/book/ch05" >}})、[张成]({{< relref "/book/ch06" >}}) |
-| 假设房价模型 | 怎样由数据找系数，又怎样由系数算另一套房的模型价格？ | [矩阵]({{< relref "/book/ch03" >}})、[两个计算方向]({{< relref "/book/ch05" >}}) |
+| 假设房价模型 | 怎样由数据找系数，又怎样由系数算另一套房的模型价格？ | [矩阵与两个计算方向]({{< relref "/book/ch03" >}}) |
 | 同一距离记录公里和米 | 多一列是否增加信息？系数为什么不唯一？ | [线性相关]({{< relref "/book/ch07" >}}) |
 | 仓库库存 | 哪些数可以相加，坐标顺序为什么重要？ | [向量]({{< relref "/book/ch04" >}}) |
-| 双声道采样 | 如何混音、产生左右不同的信号、换一种坐标来完整记录？ | [向量]({{< relref "/book/ch04" >}})、[可达范围]({{< relref "/book/ch06" >}})、[基]({{< relref "/book/ch08" >}}) |
+| 双声道采样 | 如何混音、换一种坐标来完整记录，删去一个坐标又会丢掉什么？ | [向量]({{< relref "/book/ch04" >}})、[基]({{< relref "/book/ch08" >}}) |
 | 两渠道销售报表 | 三个字段为何只有两个独立的数？ | [维数]({{< relref "/book/ch09" >}}) |
 | 图像特征点 | 剪切与拉伸怎样移动坐标？为什么处理顺序重要？ | [线性变换]({{< relref "/book/ch10" >}})、[矩阵乘法]({{< relref "/book/ch11" >}}) |
 | 房价数据换单位 | 怎样把单位换算合进已知系数？ | [矩阵乘法]({{< relref "/book/ch11" >}}) |
@@ -24,6 +28,10 @@ weight: 30
 | 两次测验成绩 | 哪些共同变化值得保留，降维丢掉哪些区别？ | [PCA]({{< relref "/book/ch24" >}}) |
 
 ## 可运行的例子
+
+[配料、基与维数实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/ingredients_basis.ipynb)贯穿第七至九章：先比较相同成分的不同配方，再换基记录同一个目标，最后增加总质量这一项输出，检查三列是否仍然相关。
+
+[绳索受力实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_forces.ipynb)依次改变拉力、目标合力和绳子数量；[恒力做功实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_work.ipynb)保持力的大小不变，改变方向，比较做功。两份实验都先提预测问题，再绘图核对，最后要求去掉具体背景推导一般关系。
 
 打开[配料与双声道实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)：沿一条成分约束移动配方，观察第二项要求何时满足；再把双声道波形换成共同与差别两个坐标，检查重建与信息丢失。[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)可下载到本地运行。
 

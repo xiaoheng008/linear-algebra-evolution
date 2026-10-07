@@ -1,134 +1,131 @@
 ---
 title: 矩阵乘向量的输出由什么组成？
-description: 从同一组方程的两种读法，发现矩阵乘法是列向量的线性组合。
+description: 从混合原料的成分计算出发，按行、按列读同一次计算，再用绳索受力迁移并推导一般公式。
 book_number: '5'
 weight: 60
 ---
 
-## 回到第一章的交点
+## 已经选好配方，会得到什么？
 
-我们在第一章解过这组方程：
-
-\[
-\begin{cases}
-x+y=5,\\
-2x-y=1.
-\end{cases}
-\]
-
-当右边的数是 5 和 1 时，两条直线交于 `(2,3)`。当时我们从方程出发找交点。现在反过来：若已知点 `(2,3)`，把它代进每条方程，右边会得到什么？
+第三章把成分表写成了
 
 \[
-2+3=5,\qquad 2\cdot2-3=1.
+A=\begin{bmatrix}10&20\\20&10\end{bmatrix}.
 \]
 
-每一行各算出一个数，按顺序排起来就是 `b=(5,1)`。这一次是给定 `x`，逐行算出 `b`；第一章则是给定 `b`，找出同时满足两行的 `x`。
+每行按蛋白质、脂肪排列，每列按甲、乙排列。现在我们使用甲 100 克、乙 200 克，用量向量就是 `x=(1,2)`。
 
-![两条直线 x+y=5 与 2x-y=1 相交于 (2,3)；把交点代入两行，分别得到 b 的坐标 5 和 1](ax-b-directions.svg)
-
-## 把两行写成矩阵
-
-把每行中 `x`、`y` 的系数排在一起：
+先不看公式，用成分表算出两项总量。每行分别取对应的用量相乘、相加：
 
 \[
-A=\begin{bmatrix}1&1\\2&-1\end{bmatrix},\qquad
-\mathbf{x}=\begin{bmatrix}2\\3\end{bmatrix},\qquad
-\mathbf{b}=\begin{bmatrix}5\\1\end{bmatrix}.
+A\begin{bmatrix}1\\2\end{bmatrix}
+=\begin{bmatrix}10\cdot1+20\cdot2\\20\cdot1+10\cdot2\end{bmatrix}
+=\begin{bmatrix}50\\40\end{bmatrix}.
 \]
 
-按行计算，第一行给出 `1·2+1·3=5`，第二行给出 `2·2−1·3=1`。所以
+这叫按行计算：第一行算蛋白质，第二行算脂肪。`A` 的数是每份成分克数，输入是份数，输出是总成分克数。
+
+## 换一个读法：先看每种原料带来了什么
+
+甲的一份同时带来蛋白质 10 克、脂肪 20 克；乙的一份同时带来蛋白质 20 克、脂肪 10 克。我们把每种原料的完整贡献写成一列：
 
 \[
-A\mathbf{x}=\begin{bmatrix}1&1\\2&-1\end{bmatrix}
-\begin{bmatrix}2\\3\end{bmatrix}
-=\begin{bmatrix}5\\1\end{bmatrix}=\mathbf{b}.
+\mathbf{a}_1=\begin{bmatrix}10\\20\end{bmatrix},\qquad
+\mathbf{a}_2=\begin{bmatrix}20\\10\end{bmatrix}.
 \]
 
-这里的 `b` 是计算结果，不是预先指定的目标。
-
-## 同一次计算，按列重排
-
-刚才我们按行看，每一行各算一个输出。现在换个分组方式：把 `x` 的第一项 2 与矩阵第一列相乘，把第二项 3 与第二列相乘，再把两列相加：
+它们恰好就是矩阵的两列。要算一份甲、两份乙，可以先把两份乙的贡献放大，再合起来：
 
 \[
-2\begin{bmatrix}1\\2\end{bmatrix}
-+3\begin{bmatrix}1\\-1\end{bmatrix}
-=\begin{bmatrix}2\\4\end{bmatrix}
-+\begin{bmatrix}3\\-3\end{bmatrix}
-=\begin{bmatrix}5\\1\end{bmatrix}.
+1\begin{bmatrix}10\\20\end{bmatrix}
++2\begin{bmatrix}20\\10\end{bmatrix}
+=\begin{bmatrix}10\\20\end{bmatrix}
++\begin{bmatrix}40\\20\end{bmatrix}
+=\begin{bmatrix}50\\40\end{bmatrix}.
 \]
 
-得到的还是刚才的 `b`。输入 `x` 的坐标，恰好是矩阵各列要乘的倍数。按行分组容易算出每个输出坐标；按列分组则让我们看见：输入怎样把各列组合成输出。
+得到的还是刚才的结果。按行是在问每项成分总共多少；按列是在问每种原料贡献多少，再把完整贡献合并。
 
-## 这叫线性组合
+## 改一次用量，看看这个读法是否还行
 
-把若干向量各乘一个数，再把结果相加，叫作它们的**线性组合**。本例中，`A` 的两列是
+把配方改成甲 200 克、乙 100 克。你先按列算，再按行核对。如果全部用量翻倍，两项总成分又会怎样？
+
+> [!DETAILS] 核对两个变化
+> 新配方是 `2a_1+a_2=(40,50)`。若把原配方 `(1,2)` 翻倍成 `(2,4)`，产出也翻倍成 `(100,80)`。成分表没有变，变的是每列取多少倍。
+
+因此对任意用量 `x,y`，都有
 
 \[
-\mathbf{a}_1=\begin{bmatrix}1\\2\end{bmatrix},\qquad
-\mathbf{a}_2=\begin{bmatrix}1\\-1\end{bmatrix},
+A\begin{bmatrix}x\\y\end{bmatrix}
+=x\mathbf{a}_1+y\mathbf{a}_2.
 \]
 
-因此 `A x = 2a_1+3a_2=b`。这不是另一条矩阵乘法规则，而是把按行展开的乘法重新分组。
+这条等式来自重新分组，不是猜出的另一种算法。
 
-若矩阵有 `n` 列，把第 `i` 个输出坐标展开，就能核对一般情形：
+## 把同一件事放到绳索受力中
+
+第四章中，两根绳子每 1 牛顿张力分别贡献水平、竖直分量 `(−0.6,0.8)` 与 `(0.6,0.8)`。设两根绳的张力为 `T_L,T_R`，单位牛顿。
+
+先看 `T_L=T_R=50`。我们可以分别算两根绳的力，再把它们相加：
 
 \[
-(A\mathbf{x})_i=\sum_{j=1}^n A_{ij}x_j.
+50\begin{bmatrix}-0.6\\0.8\end{bmatrix}
++50\begin{bmatrix}0.6\\0.8\end{bmatrix}
+=\begin{bmatrix}-30\\40\end{bmatrix}
++\begin{bmatrix}30\\40\end{bmatrix}
+=\begin{bmatrix}0\\80\end{bmatrix}\ {\rm N}.
 \]
 
-矩阵第 `j` 列在第 `i` 个位置的数正是 `A_ij`，所以各列按 `x_j` 倍相加后，第 `i` 个坐标仍是这个和。每个坐标都相同，便有
+水平分量抵消，竖直分量相加，恰好抵消向下的 80 牛顿重力。把两支方向排成列，也就是
 
 \[
-A\mathbf{x}=\sum_{j=1}^n x_j\mathbf{a}_j.
+A=\begin{bmatrix}-0.6&0.6\\0.8&0.8\end{bmatrix},\qquad
+A\begin{bmatrix}T_L\\T_R\end{bmatrix}
+=\begin{bmatrix}0\\80\end{bmatrix}.
 \]
 
-## 已知哪一边，决定要做哪件事
+这里矩阵的数是无单位的方向分量，输入与输出的单位都是牛顿。它和配料计算的列结构相同，但每个数的物理意义不同。
 
-`A x=b` 可以提出两个方向的问题。已知 `A` 和 `x`，按行计算就得到 `b`；已知 `A` 和目标 `b`，则要找出能组成这个目标的输入 `x`。后者正是解方程组：每个目标坐标都给出一条约束，答案必须同时满足它们。
+![两根绳索的张力方向，以及两支力向量的首尾相接相加，水平分量抵消后得到向上的 80 牛顿合力](force-combination.png)
 
-所以“根据 `A` 和给定的 `x` 求 `b`”并不是另一种解方程。它是在执行矩阵规定的计算；反过来求 `x`，才是在问哪些输入会产生指定输出。
+左图画出作用于同一个点的三个力；右图把两支绳索力首尾相接。箭头长度表示力的大小，不是实际绳长。绿色箭头只表示两根绳的合力，仍须加上重力才得到总外力零。
 
-## 回到房价模型
+## 现在给这种计算起个名字
 
-[第三章]({{< relref "/book/ch03" >}})用两套房的已知价格，求出面积和距离的系数 `x=(2,−10)`。当时两套房各给出一条关于系数的约束，求 `x` 就是找这些约束的共同解。
+把若干向量分别乘一个数，再相加，叫作它们的**线性组合**。配料的系数是用量，绳索的系数是张力；名字不同，保留下来的计算关系相同。
 
-系数确定以后，面积 90 平方米、距离 0.5 公里的丙房可以直接算出模型价格：
+在纯数学定义中，系数可以取任意实数。原料用量与绳索张力却须非负；数学允许的组合，不一定是这个场景里实际可用的选择。下一章我们会专门检查这个区别。
+
+## 最后去掉原料与力，推导一般式子
+
+设矩阵第 `j` 列为 `a_j`，输入第 `j` 个坐标为 `x_j`。先只比较第 `i` 个输出：
 
 \[
-\begin{bmatrix}90&0.5\end{bmatrix}
-\begin{bmatrix}2\\-10\end{bmatrix}
-=\begin{bmatrix}175\end{bmatrix}.
+(A\mathbf{x})_i=A_{i1}x_1+\cdots+A_{in}x_n.
 \]
 
-这一行房屋数据是 `A`，两项模型系数是 `x`，算出的价格是 `b`。这里已知 `A,x`，待求 `b`。把两种问题放在一起看：有房屋数据和价格，就求能解释它们的系数；有房屋数据和系数，就算模型给出的价格。
-
-## 同一张成分表，既能查配方，也能算产出
-
-把第一章的原料数据排成矩阵：行按“蛋白质、脂肪”，列按“甲、乙”。
+各列按 `x_j` 倍相加后，第 `i` 个坐标也正是这个和。每个坐标都相同，所以
 
 \[
-A=\begin{bmatrix}10&20\\20&10\end{bmatrix},\qquad
-\mathbf{x}=\begin{bmatrix}1\\2\end{bmatrix},\qquad
-A\mathbf{x}=\begin{bmatrix}50\\40\end{bmatrix}=\mathbf{b}.
+A\mathbf{x}=\sum_{j=1}^{n}x_j\mathbf{a}_j.
 \]
 
-`A` 的每个数是每 100 克原料贡献的成分克数；`x` 的每个数是使用多少个 100 克；`b` 的每个数是混合后的成分克数。
+这个结论不需要知道坐标表示蛋白质还是水平力。我们从具体计算走到通用式子，保留的是各项相乘、相加与重新分组的规则。
 
-按行读，第一行算蛋白质总量，第二行算脂肪总量。按列读，第一列是甲的一份成分，第二列是乙的一份成分；取一份甲、两份乙，再合起来。
+## 已知输入与寻找输入，是两种问题
 
-若已知想要 `b=(50,40)`，不知道配方 `x`，就解方程组。若已经选定 `x=(2,1)`，则无需解方程，直接算出 `b=(40,50)`。先猜这两项为什么对调了，再按行核对。
+配方或张力已经选定，`Ax` 告诉我们会产生什么输出。目标已经给定，则要求哪些输入满足 `Ax=b`：每行给出一条约束，答案必须在它们解集的交集里。
 
-房价模型中的 `x` 是待估计的模型系数，这里 `x` 是原料用量。它们在各自问题里含义不同，但都处在矩阵计算的输入位置。
+第三章的房价也如此：先用房屋数据与价格求系数，再用数据与系数算模型价格。这个场景多了一层“模型系数”的解释，列组合的计算并没有变。
 
-## 实验
+作为纯符号练习，取 `A=[[1,1],[2,−1]]`，输入 `(2,3)`。你可以按行得到 `(5,1)`，再按列写成 `2(1,2)+3(1,−1)` 核对。没有应用背景时，我们也知道为什么这样计算。
 
-打开[列组合交互实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)，先按实验给出的矩阵和输入，分别用行、列两种方式手算输出，再运行代码核对。随后改变输入，观察列的倍数变了，输出怎样跟着变。也可以下载[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)在本地运行。
+## 实验与下一步
 
-## 下一步：这些列一共能生成哪些输出？
+在[配料实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)里改变用量，再在[绳索受力实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_forces.ipynb)里改变张力。先画出两列各取几倍，再看合力是否平衡重力。[列组合实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)保留纯坐标计算，供我们去掉背景后练习。
 
-输入改变时，输出仍是这两列的某种组合。哪些目标能这样得到，哪些够不着？下一章就来找出这批可能输出的范围。
+下一章继续问：这些方向所有可能的组合，究竟能到哪里？能算出一个输出，还不等于了解全部输出范围。
 
-## 不看推导，重新分组一次
+## 合上书，重新分组一次
 
-从 `A x` 的按行计算出发，自己把各项按 `x` 的坐标重新分组，说明为什么结果等于矩阵列的加权和。再回答：已知 `A,x` 与已知 `A,b`，分别要找什么？
+用配料或绳索说明一行、一列和输入系数的含义，再不借助背景推导 `Ax=Σx_ja_j`。说清任意实数系数与实际可用系数的区别。
