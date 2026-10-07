@@ -50,6 +50,9 @@ jobs:
       - name: Download OINK
         run: go mod download github.com/pgsty/oink
 
+      - name: Check math markup
+        run: python3 -m unittest discover -s tests -v
+
       - name: Build
         run: |
           hugo --cleanDestinationDir --gc --minify --environment production \
