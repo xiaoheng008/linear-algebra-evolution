@@ -80,8 +80,8 @@ A\left(t\begin{bmatrix}1\\1\end{bmatrix}\right)
 因此沿 \(x_2=-x_1\) 的直线，矩阵只做两倍缩放。
 
 <picture>
-<source media="(min-width: 1200px)" srcset="eigen-directions-wide.png">
-<img src="eigen-directions.png" alt="普通输入从横轴转向；相等坐标的输入沿原直线放大四倍；相反坐标的输入沿原直线放大两倍。灰色为输入，绿色虚线为输出。">
+<source media="(min-width: 1200px)" srcset="{{< relref "/book/ch15" >}}eigen-directions-wide.png">
+<img src="{{< relref "/book/ch15" >}}eigen-directions.png" alt="普通输入从横轴转向；相等坐标的输入沿原直线放大四倍；相反坐标的输入沿原直线放大两倍。灰色为输入，绿色虚线为输出。">
 </picture>
 
 灰色箭头是输入，绿色虚线箭头是输出。普通输入改变了所在直线，后两组没有。比较放大倍数时看坐标标注，各小图使用的刻度不同。
@@ -135,8 +135,8 @@ A\mathbf x=2(4\mathbf v_1)+2\mathbf v_2
 把两个向量相加，得到 \((8,8)^T+(2,-2)^T=(10,6)^T\)。直接乘原矩阵也得到这个结果。
 
 <picture>
-<source media="(min-width: 1200px)" srcset="eigen-decomposition-wide.png">
-<img src="eigen-decomposition.png" alt="输入三、一拆成蓝色的二倍v1与橙色的v2；作用后，两部分分别变成八倍v1与二倍v2，相加得到十、六。">
+<source media="(min-width: 1200px)" srcset="{{< relref "/book/ch15" >}}eigen-decomposition-wide.png">
+<img src="{{< relref "/book/ch15" >}}eigen-decomposition.png" alt="输入三、一拆成蓝色的二倍v1与橙色的v2；作用后，两部分分别变成八倍v1与二倍v2，相加得到十、六。">
 </picture>
 
 蓝色表示沿 \(\mathbf v_1\) 的贡献，橙色表示沿 \(\mathbf v_2\) 的贡献。橙色箭头接在蓝色箭头末端，表示向量相加；虚线从原点直接指向总结果。两图刻度不同，不能用图片上的箭头长度直接比较倍数。

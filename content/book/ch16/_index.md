@@ -196,8 +196,8 @@ M_4\mathbf x=(x_1+2x_2)\begin{bmatrix}1\\2\end{bmatrix}.
 \(M_5\) 的第二列改成 \((2,5)^T\)，不再与第一列在同一条直线上。两列线性无关，能组合出整个平面的输出。
 
 <picture>
-<source media="(min-width: 1200px)" srcset="det-columns-wide.png">
-<img src="det-columns.png" alt="M4的两列在同一条直线上，单位正方形的输出只剩线段；M5的两列撑开一个面积为1的平行四边形。">
+<source media="(min-width: 1200px)" srcset="{{< relref "/book/ch16" >}}det-columns-wide.png">
+<img src="{{< relref "/book/ch16" >}}det-columns.png" alt="M4的两列在同一条直线上，单位正方形的输出只剩线段；M5的两列撑开一个面积为1的平行四边形。">
 </picture>
 
 蓝箭头是第一列，橙箭头是第二列。淡绿色区域是单位正方形经过矩阵后的形状：左边只剩线段，右边还撑得出面积。
@@ -245,8 +245,8 @@ T=\begin{bmatrix}a&b\\0&h\end{bmatrix}.
 若 \(a=0\) 但第一列非零，可交换两个坐标轴后做同样的计算，普通面积不变；若第一列为零，图形只剩线或点，面积与行列式也都为零。
 
 <picture>
-<source media="(min-width: 1200px)" srcset="det-shear-wide.png">
-<img src="det-shear.png" alt="矩阵三一一三的两列撑起面积8的平行四边形；上下剪切后第一列变水平，底边为3，高度为8/3，面积仍为8。">
+<source media="(min-width: 1200px)" srcset="{{< relref "/book/ch16" >}}det-shear-wide.png">
+<img src="{{< relref "/book/ch16" >}}det-shear.png" alt="矩阵三一一三的两列撑起面积8的平行四边形；上下剪切后第一列变水平，底边为3，高度为8/3，面积仍为8。">
 </picture>
 
 图中用上一章的 \(A=\begin{bmatrix}3&1\\1&3\end{bmatrix}\)：剪切后底边为3，高度为 \(8/3\)，所以面积是8。我们看到的不是一个新公式，而是消元里的 \(ad-bc\) 在图形上的另一种表现。

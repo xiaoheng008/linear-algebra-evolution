@@ -12,6 +12,8 @@ def display_math_errors(source):
     fence = None
     for number, line in enumerate(source.splitlines(), 1):
         stripped = line.strip()
+        while stripped.startswith(">"):
+            stripped = stripped[1:].lstrip()
         if stripped.startswith(("~~~", chr(96) * 3)):
             marker = stripped[0]
             if fence is None:
@@ -50,6 +52,17 @@ class MathMarkupTests(unittest.TestCase):
     def test_code_examples_are_ignored(self):
         fence = chr(96) * 3
         source = f"{fence}text\n\\[\nx\n=\ny\n\\]\n{fence}"
+        self.assertEqual(display_math_errors(source), [])
+
+    def test_quoted_math_is_checked(self):
+        source = "> \\[\n> x\n> =\n> y\n> \\]"
+        self.assertEqual(display_math_errors(source), [
+            (3, "standalone heading underline inside math")
+        ])
+
+    def test_quoted_code_examples_are_ignored(self):
+        fence = chr(96) * 3
+        source = f"> {fence}text\n> \\[\n> x\n> =\n> y\n> \\]\n> {fence}"
         self.assertEqual(display_math_errors(source), [])
 
     def test_content_math_blocks(self):
