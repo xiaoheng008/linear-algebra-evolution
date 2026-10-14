@@ -4,7 +4,7 @@ description: 从配料、房价、库存、双声道、报表与图像坐标，�
 weight: 30
 ---
 
-这些例子与正文一起推进。先看各个量的含义，再手算；最后把结果读回原问题。
+正文每章保留稳定主问题，其他应用在关系讲清后作迁移。这里按场景找入口，不必同时掌握全部背景；坐标、单位与允许的系数须按各场景重新说明。
 
 | 场景 | 要回答的问题 | 章节 |
 |---|---|---|
@@ -31,7 +31,7 @@ weight: 30
 
 [配料、基与维数实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/ingredients_basis.ipynb)贯穿第七至九章：先比较相同成分的不同配方，再换基记录同一个目标，最后增加总质量这一项输出，检查三列是否仍然相关。
 
-[绳索受力实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_forces.ipynb)依次改变拉力、目标合力和绳子数量；[恒力做功实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_work.ipynb)保持力的大小不变，改变方向，比较做功。两份实验都先提预测问题，再绘图核对，最后要求去掉具体背景推导一般关系。
+[绳索受力实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_forces.ipynb)依次改变拉力、目标合力和绳子数量；[恒力做功实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_work.ipynb)保持力的大小不变，改变方向，比较做功。实验分别追踪改拉力与改夹角会影响哪一项量，绘图用于核对坐标关系；实际力学条件仍与数学实数范围分开。
 
 打开[配料与双声道实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)：沿一条成分约束移动配方，观察第二项要求何时满足；再把双声道波形换成共同与差别两个坐标，检查重建与信息丢失。[实验文件](https://github.com/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)可下载到本地运行。
 

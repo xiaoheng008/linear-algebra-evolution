@@ -11,6 +11,34 @@ def dot(left, right):
 
 
 class TutorialExampleTests(unittest.TestCase):
+    def test_changed_span_covers_every_target(self):
+        matrix = [[1, 2], [2, 3]]
+        for p, q in [(3, 5), (1, 0), (-2, 7), (0, 0)]:
+            self.assertEqual(matvec(matrix, [2 * q - 3 * p, 2 * p - q]),
+                             [p, q])
+        for a, b in [(0, 1), (3, 0), (-2, 4)]:
+            output = matvec([[1, 2], [2, 4]], [a, b])
+            self.assertEqual(output[1], 2 * output[0])
+
+    def test_nonorthogonal_projection_double_counts(self):
+        first, second = [1, 1, 0], [1, 0, 1]
+        extra = [F(dot(second, first), dot(second, second)) * x
+                 for x in second]
+        naive = [a + b for a, b in zip(first, extra)]
+        self.assertNotEqual(naive, first)
+        remainder = [b - F(dot(first, second), dot(first, first)) * a
+                     for a, b in zip(first, second)]
+        self.assertEqual(remainder, [F(1, 2), -F(1, 2), 1])
+        self.assertEqual(dot(first, remainder), 0)
+
+    def test_svd_directions_follow_sum_and_difference(self):
+        # A=M/sqrt(2), unit directions=w/sqrt(2), so Av=Mw/2.
+        matrix = [[2, 2], [-1, 1]]
+        for direction, expected in [([1, 1], [2, 0]), ([-1, 1], [0, 1])]:
+            output = [F(x, 2) for x in matvec(matrix, direction)]
+            self.assertEqual(output, expected)
+        self.assertEqual(dot([1, 1], [-1, 1]), 0)
+
     def test_row_swap_examples(self):
         self.assertEqual(matvec([[0, 1, 1], [1, 1, 0], [2, 1, 1]],
                                 [1, 2, 3]), [5, 3, 7])
