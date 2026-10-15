@@ -14,11 +14,11 @@ weight: 90
 \mathbf a=(10,20)^T,\qquad\mathbf b=(20,10)^T.
 \]
 
-能不能再省一支，只留下甲？对目标 \((50,40)^T\)，蛋白质要求甲取 5 份，脂肪却要求取 2 份。同一个用量无法满足两项。
+能不能再省一个，只留下甲？对目标 \((50,40)^T\)，蛋白质要求甲取 5 份，脂肪却要求取 2 份。同一个用量无法满足两项。
 
 只留甲，没有重复，却少了能力；甲乙丙都留，能力够，却多了记录。我们想要的是一种**既能描述全部目标，又不留下重复自由选择**的记录方式。
 
-## 两支为何刚好够？
+## 两个为何刚好够？
 
 先允许任意实数用量。任意目标成分 \((P,F)^T\) 要求
 
@@ -68,7 +68,7 @@ r\mathbf a+s\mathbf b=(s-r)\mathbf b+r\mathbf c.
 
 平面中的 \(\mathbf e_1=(1,0)^T,\mathbf e_2=(0,1)^T\) 可以表示任意 \((x,y)^T=x\mathbf e_1+y\mathbf e_2\)；零组合只能两系数都为零。它们叫**标准基**。
 
-现在把方向换成 \(\mathbf p=(1,1)^T,\mathbf q=(1,-1)^T\)。为什么这次会想到两支？因为一支负责两项一起增加，另一支负责一项增加、另一项减少，正好可以分别控制和与差。
+现在把方向换成 \(\mathbf p=(1,1)^T,\mathbf q=(1,-1)^T\)。为什么这次会想到两个？因为一个负责两项一起增加，另一个负责一项增加、另一项减少，正好可以分别控制和与差。
 
 要表示 \((x,y)^T=M\mathbf p+S\mathbf q\)，按坐标读得
 
@@ -80,7 +80,7 @@ M+S=x,\qquad M-S=y.
 
 ## 双声道为什么会用这组基？
 
-左右信号 \((L,R)^T\) 中，有些变化两边一起发生，有些变化只在两边的差别里。刚才的两支正好记录这两类贡献：
+左右信号 \((L,R)^T\) 中，有些变化两边一起发生，有些变化只在两边的差别里。刚才的两个正好记录这两类贡献：
 
 \[
 (L,R)^T=M(1,1)^T+S(1,-1)^T,
@@ -100,8 +100,8 @@ M+S=x,\qquad M-S=y.
 在 \(\mathbf p,\mathbf q\) 基下，\((2,2)^T\) 和 \((2,-2)^T\) 各需要哪些系数？只留一个系数分别会损失什么？
 
 > [!DETAILS] 核对
-> 前者为 \(2\mathbf p\)，坐标 `(2,0)`；后者为 \(2\mathbf q\)，坐标 `(0,2)`。第一项记录共同信号，第二项记录左右差别；删掉任何一项，都不能恢复所有信号。
+> 前者为 \(2\mathbf p\)，坐标 \((2,0)\)；后者为 \(2\mathbf q\)，坐标 \((0,2)\)。第一项记录共同信号，第二项记录左右差别；删掉任何一项，都不能恢复所有信号。
 
 [基与坐标实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/08_basis.ipynb)以及[配料实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/ingredients_basis.ipynb)检查不同基的系数；[双声道实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)检查整段信号的换基与恢复。
 
-我们已找到几组平面基，方向各不相同，却都使用两支。这个数只是例子碰巧相同，还是空间本身决定了它？
+我们已找到几组平面基，方向各不相同，却都使用两个。这个数只是例子碰巧相同，还是空间本身决定了它？
