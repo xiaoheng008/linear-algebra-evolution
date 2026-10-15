@@ -1,5 +1,6 @@
 ---
 title: 两次变换，怎样合成一次？
+linkTitle: '矩阵乘法：两步并成一步'
 description: 从先剪切再拉伸的具体例子，按基向量的去向推导矩阵乘法，并比较交换顺序后的结果。
 book_number: '11'
 weight: 120

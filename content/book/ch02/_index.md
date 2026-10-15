@@ -1,5 +1,6 @@
 ---
 title: 怎样系统地简化方程组？
+linkTitle: '消元：化简但不改答案'
 description: 沿着同一份配料记录，比较确定用量、重复条件与矛盾条件，再推广为高斯消元。
 book_number: '2'
 weight: 30

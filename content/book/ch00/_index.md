@@ -1,5 +1,6 @@
 ---
 title: 序言：把知识学成可以重建的东西
+linkTitle: '序言'
 description: 这本教程如何沿着问题压力逐步重建线性代数。
 weight: 10
 ---

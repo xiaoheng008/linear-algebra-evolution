@@ -1,5 +1,6 @@
 ---
 title: 多个约束能否同时成立？
+linkTitle: '方程组：同时满足几个要求'
 description: 从两种原料的配方出发，先找单个要求的全部解，再找两个要求的交集。
 book_number: '1'
 weight: 20

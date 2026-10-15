@@ -1,5 +1,6 @@
 ---
 title: 少留几个方向，怎样控制损失？
+linkTitle: '低秩近似：少留几个方向'
 description: 从矩阵的秩一分量引出截断 SVD，说明最佳低秩近似与误差、存储的关系。
 book_number: '23'
 weight: 240

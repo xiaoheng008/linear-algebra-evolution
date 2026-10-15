@@ -1,5 +1,6 @@
 ---
 title: 多给一列，真的多了新能力吗？
+linkTitle: '线性相关：多一列有没有用'
 description: 从第三种原料与第三根绳子，发现重复表示，再定义线性相关与线性无关。
 book_number: '7'
 weight: 80

@@ -1,5 +1,6 @@
 ---
 title: 忘掉公式，还能从问题重新走一遍吗？
+linkTitle: '从问题重走一遍'
 description: 以房价、客户迁移与双声道为线索，逐步重建方程、空间、变换和近似的完整路线。
 book_number: '25'
 weight: 260

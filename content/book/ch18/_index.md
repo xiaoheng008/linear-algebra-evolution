@@ -1,5 +1,6 @@
 ---
 title: “更接近”到底按什么来比较？
+linkTitle: '内积与正交：怎样比远近'
 description: 从误差与长度交叉项理解内积，再连接单位正交坐标、四空间及谱定理的进阶条件。
 book_number: '18'
 weight: 190

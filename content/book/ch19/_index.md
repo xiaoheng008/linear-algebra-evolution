@@ -1,5 +1,6 @@
 ---
 title: 目标到不了，最近能到哪里？
+linkTitle: '投影：最近的可达点'
 description: 先从具体候选与法向修正找到最近点，再证明垂直残差保证唯一最优，并推导投影公式。
 book_number: '19'
 weight: 200

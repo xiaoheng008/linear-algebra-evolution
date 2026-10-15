@@ -1,5 +1,6 @@
 ---
 title: 怎样把一组数作为整体处理？
+linkTitle: '向量：一组数整体运算'
 description: 从配料的成分、行走的位移和绳索的拉力，认识向量的加法与数乘。
 book_number: '4'
 weight: 50

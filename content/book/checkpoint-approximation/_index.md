@@ -1,5 +1,6 @@
 ---
 title: 阶段练习：最佳近似与信息损失
+linkTitle: '练习四：近似与数据'
 description: 连接内积、投影、最小二乘、QR、SVD、低秩近似与 PCA。
 weight: 255
 ---

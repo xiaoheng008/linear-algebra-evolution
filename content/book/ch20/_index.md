@@ -1,5 +1,6 @@
 ---
 title: 数据对不上，怎样找一组尽量好的系数？
+linkTitle: '最小二乘：尽量好的系数'
 description: 从三个观测与一个比例系数推导最小二乘，再回到房价模型与正规方程。
 book_number: '20'
 weight: 210

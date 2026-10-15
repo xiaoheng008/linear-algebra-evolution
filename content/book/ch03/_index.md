@@ -1,5 +1,6 @@
 ---
 title: 重复出现的系数能否压缩？
+linkTitle: '矩阵：把系数排成一张表'
 description: 继续处理原料成分表，把成分、用量与目标分开排列，再将同一种结构用于房价模型。
 book_number: '3'
 weight: 40

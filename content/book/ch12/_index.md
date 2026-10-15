@@ -1,5 +1,6 @@
 ---
 title: 变换之后，还能找回原来的输入吗？
+linkTitle: '逆矩阵：把输入找回来'
 description: 先撤销剪切，再从任意成分记录恢复用量，连接逐列求逆、逐行消元与信息丢失。
 book_number: '12'
 weight: 130

@@ -1,5 +1,6 @@
 ---
 title: 没有特征基，也能把变换拆清楚吗？
+linkTitle: 'SVD：输入输出各选方向'
 description: 从和差输出发现独立方向，比较单位输入的缩放，再用输出内积推出一般SVD与伪逆。
 book_number: '22'
 weight: 230

@@ -1,5 +1,6 @@
 ---
 title: 把重叠的方向拆开，计算能省什么事？
+linkTitle: 'QR 分解：拆掉重叠方向'
 description: 逐支减去已解释的投影，检查空间没有改变，再把换基系数记成QR并手算最小二乘。
 book_number: '21'
 weight: 220

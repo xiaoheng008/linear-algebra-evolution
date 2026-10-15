@@ -1,5 +1,6 @@
 ---
 title: 不止一个解时，怎样把所有解写全？
+linkTitle: '零空间：写全所有解'
 description: 从只记录两个数的和开始，找到被矩阵映成零的输入，再写出非零目标的全部解。
 book_number: '13'
 weight: 140

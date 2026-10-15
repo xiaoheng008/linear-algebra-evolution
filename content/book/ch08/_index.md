@@ -1,5 +1,6 @@
 ---
 title: 怎样用最少的向量描述一个平面？
+linkTitle: '基与坐标：够用又不重复'
 description: 从选择两种原料出发，检查够用与不重复，再理解基与坐标的唯一性。
 book_number: '8'
 weight: 90

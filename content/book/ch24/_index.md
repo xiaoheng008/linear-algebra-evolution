@@ -1,5 +1,6 @@
 ---
 title: 很多特征，怎样换成少数几个坐标？
+linkTitle: 'PCA：用少数坐标看数据'
 description: 从两次测验成绩的共同变化推导主成分分析，连接中心化、SVD、方差与重建。
 book_number: '24'
 weight: 250

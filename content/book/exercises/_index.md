@@ -1,5 +1,6 @@
 ---
 title: 阶段练习：方程与列组合
+linkTitle: '练习一：方程与列组合'
 description: 用回忆、推导、应用和重建检验第一阶段的概念链。
 weight: 65
 ---
