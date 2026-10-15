@@ -55,7 +55,7 @@ A\begin{bmatrix}x\\y\end{bmatrix}
 +y\begin{bmatrix}20\\10\end{bmatrix}.
 \]
 
-若有更多列，道理也一样。只看第 \(i\) 个坐标，按行得到 \(\sum_jA_{ij}x_j\)；按列取 \(x_j\) 倍相加，第 \(i\) 项仍是这个和。每项都相同，所以
+若有更多列，道理也一样。只看第 \(i\) 个坐标，按行得到 \(\sum_jA_{ij}x_j\)。符号 \(\sum\) 读作“求和”，这里表示把 \(j=1,2,\ldots,n\) 的各项 \(A_{ij}x_j\) 全部加起来。按列取 \(x_j\) 倍相加，第 \(i\) 项仍是这个和。每项都相同，所以
 
 \[
 A\mathbf x=\sum_{j=1}^n x_j\mathbf a_j.
@@ -68,8 +68,6 @@ A\mathbf x=\sum_{j=1}^n x_j\mathbf a_j.
 给定 \(\mathbf x\)，\(A\mathbf x\) 算它能产生的结果。给定目标 \(\mathbf b\)，求 \(A\mathbf x=\mathbf b\)，就是找每列取几倍才能拼出目标。
 
 第一章把它看成各行约束的交集；现在按列看，则是各份贡献的组合。两个视角在回答同一个问题，不是两套互不相干的理论。
-
-这也留下一个新疑问：我们已经能拼出 \((50,40)\)，但是否每个目标都能这样拼？如果某个目标拼不出，是用量没选好，还是这些列本身不够？下一章要把这两种情况分清。
 
 ## 力的合成也能按列读
 
@@ -87,7 +85,7 @@ A\mathbf x=\sum_{j=1}^n x_j\mathbf a_j.
 
 右图把两个力首尾相接，绿色箭头是绳索合力。仍须加上重力，才能得到总外力零。
 
-数学上的线性组合允许任意实数系数，配料用量、绳索张力却须非负。我们会先研究所有实数组合的范围，再回到场景筛选可行方案；这样可以知道限制来自列的关系，还是来自实际用量。
+数学上的线性组合允许任意实数系数，而配料用量、绳索张力都不能为负。接下来先研究所有实数组合，再回到实际问题筛选；这样能分清一个限制是来自列本身，还是来自“不能为负”。
 
 ## 不借背景也读得懂吗？
 
@@ -97,3 +95,5 @@ A\mathbf x=\sum_{j=1}^n x_j\mathbf a_j.
 > \(2(1,2)^T+3(1,-1)^T=(5,1)^T\)。逐行也得到 \((2+3,4-3)^T\)。输入有两项，分别控制两列，而不是分别控制输出的两项。
 
 [列组合实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/05_column_combination.ipynb)让你分别改变两个输入；[配料实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/application_examples.ipynb)和[绳索实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_forces.ipynb)把每列重新读回实际贡献。
+
+这也留下一个新疑问：我们已经能拼出 \((50,40)\)，但是否每个目标都能这样拼？如果某个目标拼不出，是用量没选好，还是这些列本身不够？下一章要把这两种情况分清。
