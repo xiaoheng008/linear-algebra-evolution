@@ -65,11 +65,11 @@ weight: 200
 
 ## 也可以沿空间内部取坐标
 
-更多维数时，有时空间内部基比法向量方便。仍从平面原基 \((1,0,1)\)、\((0,1,1)\) 出发。第一个除以长度，得 \(q_1=(1,0,1)^T/\sqrt2\)。
+更多维数时，有时空间内部基比法向量方便。仍从平面原基 \((1,0,1)\)、\((0,1,1)\) 出发。第一个除以长度，得 \(\mathbf q_1=(1,0,1)^T/\sqrt2\)。
 
-第二个想同时在平面里、垂直第一个。设 \((a,b,c)\)，条件为 \(c=a+b\)、\(a+c=0\)。取 \(a=-1\)，便得 \(c=1,b=2\)。除以长度得 \(q_2=(-1,2,1)^T/\sqrt6\)。方向不是凭空挑的，是两条条件求出来的。
+第二个想同时在平面里、垂直第一个。设 \((a,b,c)\)，条件为 \(c=a+b\)、\(a+c=0\)。取 \(a=-1\)，便得 \(c=1,b=2\)。除以长度得 \(\mathbf q_2=(-1,2,1)^T/\sqrt6\)。方向不是凭空挑的，是两条条件求出来的。
 
-与目标 \(\mathbf b=(2,3,6)\) 内积：\(q_1^T b=(2+0+6)/\sqrt2=8/\sqrt2\)，\(q_2^Tb=(-2+6+6)/\sqrt6=10/\sqrt6\)。按第十八章的办法，用这两个系数合成：
+与目标 \(\mathbf b=(2,3,6)\) 内积：\(\mathbf q_1^T \mathbf b=(2+0+6)/\sqrt2=8/\sqrt2\)，\(\mathbf q_2^T\mathbf b=(-2+6+6)/\sqrt6=10/\sqrt6\)。按第十八章的办法，用这两个系数合成：
 
 \[
 \mathbf p=\frac8{\sqrt2}\mathbf q_1+\frac{10}{\sqrt6}\mathbf q_2
@@ -80,21 +80,21 @@ weight: 200
 
 ## 从直线到一般子空间的公式
 
-直线非零方向 \(u\)，候选点是 \(cu\)。要求残差正交，\(u^T(b-cu)=0\)，即 \(u^Tb-c\,u^Tu=0\)，所以 \(c=u^Tb/u^Tu\)，最近点是
+直线非零方向 \(\mathbf u\)，候选点是 \(c\mathbf u\)。要求残差正交，\(\mathbf u^T(\mathbf b-c\mathbf u)=0\)，即 \(\mathbf u^T\mathbf b-c\,\mathbf u^T\mathbf u=0\)，所以 \(c=\mathbf u^T\mathbf b/\mathbf u^T\mathbf u\)，最近点是
 
 \[
 \mathbf p=\frac{\mathbf u^T\mathbf b}{\mathbf u^T\mathbf u}\mathbf u.
 \]
 
-也可配方：\(\|b-cu\|^2=\|u\|^2(c-u^Tb/\|u\|^2)^2+\|b\|^2-(u^Tb)^2/\|u\|^2\)，再次证明最小值。除数非零要求 \(u\ne0\)。
+也可配方：\(\|\mathbf b-c\mathbf u\|^2=\|\mathbf u\|^2(c-\mathbf u^T\mathbf b/\|\mathbf u\|^2)^2+\|\mathbf b\|^2-(\mathbf u^T\mathbf b)^2/\|\mathbf u\|^2\)，再次证明最小值。除数非零要求 \(\mathbf u\ne0\)。
 
-子空间有单位正交基 \(q_j\) 时，保留每个方向的系数：
+子空间有单位正交基 \(\mathbf q_j\) 时，保留每个方向的系数：
 
 \[
 \mathbf p=\sum_j(\mathbf q_j^T\mathbf b)\mathbf q_j=QQ^T\mathbf b.
 \]
 
-残差与每个基向量的内积都为零，因此它与整个子空间正交；再用前面的勾股关系，证明这个点唯一最优。投影矩阵 \(P=QQ^T\) 满足 \(P^T=P\) 和 \(P^2=QQ^TQQ^T=Q(Q^TQ)Q^T=QQ^T=P\)：投好以后再投不变。长方形 \(Q\) 的 \(Q^TQ=I\)，但 \(QQ^T\) 不是整个空间的单位矩阵，\(I-P\) 留下误差部分。直线时 \(P=uu^T/(u^Tu)\)。
+残差与每个基向量的内积都为零，因此它与整个子空间正交；再用前面的勾股关系，证明这个点唯一最优。投影矩阵 \(P=QQ^T\) 满足 \(P^T=P\) 和 \(P^2=QQ^TQQ^T=Q(Q^TQ)Q^T=QQ^T=P\)：投好以后再投不变。长方形 \(Q\) 的 \(Q^TQ=I\)，但 \(QQ^T\) 不是整个空间的单位矩阵，\(I-P\) 留下误差部分。直线时 \(P=\mathbf u\mathbf u^T/(\mathbf u^T\mathbf u)\)。
 
 ## 同一平面，换成报表记录
 

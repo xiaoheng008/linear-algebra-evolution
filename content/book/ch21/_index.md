@@ -8,32 +8,32 @@ weight: 220
 
 ## 沿两个方向各投一次，为什么不能直接加？
 
-列空间由 \(a_1=(1,1,0)^T,a_2=(1,0,1)^T\) 张成。两列独立却不垂直，内积为1。
+列空间由 \(\mathbf a_1=(1,1,0)^T,\mathbf a_2=(1,0,1)^T\) 张成。两列独立却不垂直，内积为1。
 
-最容易检查的方法，是把已经在空间里的 \(a_1\) 自己拿来投影。沿第一列的投影当然是 \(a_1\)；沿第二列的投影却不是零：\(a_2^Ta_1=1\)，\(\|a_2\|^2=2\)，投影是 \(\tfrac12a_2\)。加起来成了 \(a_1+a_2/2\)，竟不再是原向量！已在空间里的点应该投影后不变，说明这条算法有问题。
+最容易检查的方法，是把已经在空间里的 \(\mathbf a_1\) 自己拿来投影。沿第一列的投影当然是 \(\mathbf a_1\)；沿第二列的投影却不是零：\(\mathbf a_2^T\mathbf a_1=1\)，\(\|\mathbf a_2\|^2=2\)，投影是 \(\tfrac12\mathbf a_2\)。加起来成了 \(\mathbf a_1+\mathbf a_2/2\)，竟不再是原向量！已在空间里的点应该投影后不变，说明这条算法有问题。
 
-原因是 \(a_1\) 沿 \(a_2\) 方向也有非零分量（\(a_2^Ta_1=1\ne0\)）。沿第一列投影时，这部分已经算在 \(a_1\) 里；沿第二列投影又把它算了一次。第十九章相加投影需要正交方向。现在就把这两列改成正交方向，但不能丢掉原有空间。
+原因是 \(\mathbf a_1\) 沿 \(\mathbf a_2\) 方向也有非零分量（\(\mathbf a_2^T\mathbf a_1=1\ne0\)）。沿第一列投影时，这部分已经算在 \(\mathbf a_1\) 里；沿第二列投影又把它算了一次。第十九章相加投影需要正交方向。现在就把这两列改成正交方向，但不能丢掉原有空间。
 
 ## 保留第一列，第二列只留新增部分
 
-第一列除以长 \(\sqrt2\)，得 \(q_1=(1,1,0)^T/\sqrt2\)。第二列沿它的系数为 \(q_1^Ta_2=1/\sqrt2\)，相应投影是完整向量
+第一列除以长 \(\sqrt2\)，得 \(\mathbf q_1=(1,1,0)^T/\sqrt2\)。第二列沿它的系数为 \(\mathbf q_1^T\mathbf a_2=1/\sqrt2\)，相应投影是完整向量
 
 \[
-(q_1^Ta_2)q_1=(1/2,1/2,0)^T.
+(\mathbf q_1^T\mathbf a_2)\mathbf q_1=(1/2,1/2,0)^T.
 \]
 
 减掉这个重叠部分，剩
 
 \[
-w_2=a_2-(q_1^Ta_2)q_1=(1/2,-1/2,1)^T.
+\mathbf w_2=\mathbf a_2-(\mathbf q_1^T\mathbf a_2)\mathbf q_1=(1/2,-1/2,1)^T.
 \]
 
-核对一下：\(w_2\) 与 \((1,1,0)\) 的内积是 \(\tfrac12-\tfrac12+0=0\)，确实垂直。它的长度平方是 \(\tfrac14+\tfrac14+1=\tfrac32\)，除以长度 \(\sqrt{3/2}\)，得 \(q_2=(1,-1,2)^T/\sqrt6\)。
+核对一下：\(\mathbf w_2\) 与 \((1,1,0)\) 的内积是 \(\tfrac12-\tfrac12+0=0\)，确实垂直。它的长度平方是 \(\tfrac14+\tfrac14+1=\tfrac32\)，除以长度 \(\sqrt{3/2}\)，得 \(\mathbf q_2=(1,-1,2)^T/\sqrt6\)。
 
 新方向由旧列组合，所以新范围不在原范围之外。反向也能读回：
 
 \[
-a_1=\sqrt2q_1,\qquad a_2=\frac1{\sqrt2}q_1+\sqrt{\frac32}q_2.
+\mathbf a_1=\sqrt2\mathbf q_1,\qquad \mathbf a_2=\frac1{\sqrt2}\mathbf q_1+\sqrt{\frac32}\mathbf q_2.
 \]
 
 每个原列仍能表示，所以范围没缩小。两个非零正交向量独立，真正在同一空间建立了单位正交基。
@@ -43,7 +43,7 @@ a_1=\sqrt2q_1,\qquad a_2=\frac1{\sqrt2}q_1+\sqrt{\frac32}q_2.
 第三列应减去沿**所有已有正交方向**的部分，不能只减最后一个：
 
 \[
-w_j=a_j-\sum_{i<j}(q_i^Ta_j)q_i,\qquad q_j=w_j/\|w_j\|.
+\mathbf w_j=\mathbf a_j-\sum_{i<j}(\mathbf q_i^T\mathbf a_j)\mathbf q_i,\qquad \mathbf q_j=\mathbf w_j/\|\mathbf w_j\|.
 \]
 
 与任一旧基内积时，求和只留下对应的一项，恰好抵消。这叫 **Gram–Schmidt 正交化**。各步可反向写回原列，张成一直不变。
@@ -55,7 +55,7 @@ w_j=a_j-\sum_{i<j}(q_i^Ta_j)q_i,\qquad q_j=w_j/\|w_j\|.
 第一列在新基下是 \((\sqrt{2},0)\)，第二列是 \((1/\sqrt{2},\sqrt{3/2})\)，把这两份记录按列排成 \(R\)：
 
 \[
-A=QR,\qquad Q=[q_1\ q_2],\qquad
+A=QR,\qquad Q=[\mathbf q_1\ \mathbf q_2],\qquad
 R=\begin{bmatrix}\sqrt2&1/\sqrt2\\0&\sqrt{3/2}\end{bmatrix}.
 \]
 
@@ -65,15 +65,15 @@ R=\begin{bmatrix}\sqrt2&1/\sqrt2\\0&\sqrt{3/2}\end{bmatrix}.
 
 ## 拟合时，哪份记录应当交给回代？
 
-观测 \(b=(1,2,2)^T\)，投影输出 \(QQ^Tb\) 在正交基下的坐标就是 \(Q^Tb\)。模型 \(QRx\) 在同一基下的坐标是 \(Rx\)，所以拟合方程为
+观测 \(\mathbf b=(1,2,2)^T\)，投影输出 \(QQ^T\mathbf b\) 在正交基下的坐标就是 \(Q^T\mathbf b\)。模型 \(QR\mathbf x\) 在同一基下的坐标是 \(R\mathbf x\)，所以拟合方程为
 
 \[
-R\hat x=Q^Tb.
+R\hat{\mathbf x}=Q^T\mathbf b.
 \]
 
 它不是强行给长方形 \(Q\) 求逆，而是在比较同一组基下的唯一坐标。
 
-本例先算两个内积：\(q_1^Tb=(1+2+0)/\sqrt2=3/\sqrt2\)，\(q_2^Tb=(1-2+4)/\sqrt6=3/\sqrt6\)。代入 \(R\hat x=Q^Tb\)：
+本例先算两个内积：\(\mathbf q_1^T\mathbf b=(1+2+0)/\sqrt2=3/\sqrt2\)，\(\mathbf q_2^T\mathbf b=(1-2+4)/\sqrt6=3/\sqrt6\)。代入 \(R\hat{\mathbf x}=Q^T\mathbf b\)：
 
 \[
 \sqrt2\hat x_1+\hat x_2/\sqrt2=3/\sqrt2,\qquad
@@ -85,13 +85,13 @@ R\hat x=Q^Tb.
 也可直接检查平方误差：
 
 \[
-b-QRx=(I-QQ^T)b+Q(Q^Tb-Rx),
+\mathbf b-QR\mathbf x=(I-QQ^T)\mathbf b+Q(Q^T\mathbf b-R\mathbf x),
 \]
 
 两项正交，\(Q\) 又保持系数长度，所以
 
 \[
-\|b-QRx\|^2=\|(I-QQ^T)b\|^2+\|Q^Tb-Rx\|^2.
+\|\mathbf b-QR\mathbf x\|^2=\|(I-QQ^T)\mathbf b\|^2+\|Q^T\mathbf b-R\mathbf x\|^2.
 \]
 
 第一项模型改不了，第二项在回代解处零。这和正规方程解决同一个问题，没有另换最佳标准。

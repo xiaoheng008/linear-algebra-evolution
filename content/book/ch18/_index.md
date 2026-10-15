@@ -172,9 +172,9 @@ N(A^T)=\operatorname{Col}(A)^\perp.
 > 若 \(\lambda\ne\mu\)，只能 \(\mathbf v^T\mathbf w=0\)。但这只说明已有的方向互相垂直，还没证明方向一定够用；那正是下面谱定理要补的。
 
 > [!DETAILS] 进阶存在性证明：需要极值与求导
-> 连续函数 \(x^TAx\) 在紧的单位球面取得最大值。设单位最大方向为 \(v\)，任意 \(w\perp v\) 的球面路径 \((v+tw)/\|v+tw\|\) 在零处导数为零，给 \(w^TAv=0\)。所以 \(Av\) 垂直全部 \(v\) 的正交补，即 \(Av=\lambda v\)。
+> 连续函数 \(\mathbf x^TA\mathbf x\) 在紧的单位球面取得最大值。设单位最大方向为 \(\mathbf v\)，任意 \(\mathbf w\perp \mathbf v\) 的球面路径 \((\mathbf v+t\mathbf w)/\|\mathbf v+t\mathbf w\|\) 在零处导数为零，给 \(\mathbf w^TA\mathbf v=0\)。所以 \(A\mathbf v\) 垂直全部 \(\mathbf v\) 的正交补，即 \(A\mathbf v=\lambda \mathbf v\)。
 >
-> 对 \(w\perp v\)，有 \(v^TAw=(Av)^Tw=0\)，其正交补在变换下保持不变。限制到该低一维空间，变换仍对称，归纳得到完整正交单位特征基。
+> 对 \(\mathbf w\perp \mathbf v\)，有 \(\mathbf v^TA\mathbf w=(A\mathbf v)^T\mathbf w=0\)，其正交补在变换下保持不变。限制到该低一维空间，变换仍对称，归纳得到完整正交单位特征基。
 >
 > 这使用分析知识，不仅是消元。尚未学过时可以接受已说明适用范围的定理，基础内积与四空间计算无需这段证明。
 
