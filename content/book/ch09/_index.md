@@ -96,7 +96,13 @@ s\mathbf u+t\mathbf v+h\mathbf w=(s,t,s+t+h)^T.
 
 旧关系的差现在是 \((0,0,-100)^T\)，不再为零。还得检查有没有另一种关系：若 \(r\widetilde{\mathbf a}+s\widetilde{\mathbf b}+t\widetilde{\mathbf c}=0\)，前两项给出 \(r=s=-t\)，质量项 \(r+s+t=0\) 又迫使 \(t=0\)，三项全零。
 
-任意目标 \((P,F,M)^T\) 的实数表示也可由三条方程求出：
+任意目标 \((P,F,M)^T\) 的实数表示也可以求出。三条方程是
+
+\[
+10r+20s+30t=P,\qquad20r+10s+30t=F,\qquad100(r+s+t)=M.
+\]
+
+前两条相加得 \(30(r+s+2t)=P+F\)，第三条给 \(r+s+t=M/100\)，两者相减就分离出 \(t\)。前两条相减得 \(10(s-r)=P-F\)，再配合 \(r+s=M/100-t\) 求出 \(r,s\)：
 
 \[
 t=\frac{P+F}{30}-\frac M{100},\qquad

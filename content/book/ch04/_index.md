@@ -86,7 +86,7 @@ c\begin{bmatrix}u_1\\u_2\end{bmatrix}=\begin{bmatrix}cu_1\\cu_2\end{bmatrix}.
 
 ## 换成没有箭头的记录
 
-库存 \((12,8)\) 箱加送来的 \((3,2)\) 箱，得到 \((15,10)\) 箱；双声道某时刻的 \((L,R)\) 加另一段对齐信号，也分别相加左右采样值。把两项都乘 0.5，表示幅度减半，不是只改一个声道。负采样值是波形的方向，不是“负音量”。
+库存 \((12,8)\) 箱加送来的 \((3,2)\) 箱，得到 \((15,10)\) 箱；双声道某时刻的 \((L,R)\) 加另一段对齐信号，也分别相加左右采样值。把两项都乘 0.5，表示幅度减半，不是只改一个声道。负采样值表示波形此刻落在零电平的另一侧，不是“负音量”。
 
 你可以在[位移实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/04_vectors.ipynb)画出先后两段位移，再核对总位移；在[绳索实验](https://colab.research.google.com/github/xiaoheng008/linear-algebra-evolution/blob/main/experiments/physics_forces.ipynb)把 10 牛顿从左绳移到右绳，看看水平和竖直合力哪项改变。
 
